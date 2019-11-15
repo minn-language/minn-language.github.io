@@ -107,6 +107,46 @@
 }
 
 /* ============================================================ */
+/* ====================        Hero        ==================== */
+/* ============================================================ */
+
+#hero {
+    background: linear-gradient(120deg, rgba(70,70,70,1) 0%, rgba(70,70,70,1) 59.95%, rgba(255,255,255,1) 60.05%, rgba(255,255,255,1) 75.95%, rgba(62,154,240,1) 76.05%, rgba(62,154,240,1) 100%);
+    max-width: calc(100vw - 60px);
+    margin-left: 60px;
+    color: white;
+    box-shadow: 10px 2px 30px #333333;
+    padding: 160px 7vw;
+}
+
+#main-logo {
+    width: 540px;
+    margin-left: 80px;
+}
+
+#hero p {
+    max-width: 53%;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#git-link {
+    background-color: var(--blue);
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-left: 16%;
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: 0.25s;
+}
+
+#git-link:hover {
+    background-color: var(--hover-blue);
+}
+
+/* ============================================================ */
 /* ====================     Main Page      ==================== */
 /* ============================================================ */
 
