@@ -188,23 +188,32 @@
                     <h1 class="journal-title">Journal #1</h1>
                     <div class="journal-goals">
                         <h2 class="journal-subtitle">Weekly Goals</h2>
-                        <p class="journal-text">Week 1</p>
+                        <p class="journal-text">Week 1 (10/14)</p>
                         <ul class="journal-list">
                             <li>Research the necessary parts of a basic programming language implementation on craftinginterpreters.com.</li>
                             <li>Learn how to use IntelliJ by using the "learn IDEA plugin," talking to Sub, and finding videos online.</li>
                         </ul>
-                        <p class="journal-text">Week 2</p>
+
+                        <p class="journal-text">Week 2 (10/21)</p>
                         <ul class="journal-list">
                             <li>Research what makes C-family languages unique (allowing null/global variables, inheritance, etc.) and make a list of each distinction I've found.</li>
                             <li>Refamiliarize myself with Java syntax by looking at other people's Java code and researching file/string manipulation functions in Java and practicing.</li>
                             <li>Start learning C syntax by looking at C code and using a C syntax reference like cprogramming.com.</li>
                         </ul>
-                        <p class="journal-text">Week 3</p>
+
+                        <p class="journal-text">Week 3 (10/28)</p>
                         <ul class="journal-list">
                             <li>Recover from the snow day and early dismissal and try to stay on my timeline.</li>
                         </ul>
+
+                        <p class="journal-text">Week 4 (11/4)</p>
+                        <ul class="journal-list">
+                            <li>Research lexemes, RegEx, and tokens to begin prototyping a scanner, following along on craftinginterpreters.com.</li>
+                            <li>Start constructing my first scanner prototype with craftinginterpreters's tutorial to understand the different necessary mechanisms inside the scanner.</li>
+                        </ul>
                     </div>
                     <br>
+
                     <div class="journal-research">
                         <h2 class="journal-subtitle">My Research and What I Learned</h2>
                         <h3 class="journal-text-header">Scanners</h3>
@@ -229,29 +238,30 @@
                         C family languages are also usually statically typed, which means all variables have a type when they are declared. Dynamically typed languages (the opposite of statically typed) allow the programmer to make a statement like “var x = 72;” then later change x to a different type like “x = ‘oranges’;”. The programmer just changed x from an integer type to a string type. Statically typed languages don’t let variables change type ever. For example, a statically typed language declares the type when the variable is created: “int x = 72;”. Right there the programmer declared x as an integer by using the int keyword. x can no longer be anything but an integer because it’s not allowed to change types. This statically/dynamically typed distinction affects the syntax of the language because dynamically typed languages just need the var keyword to declare variables but statically typed languages need many keywords for each type such as: bool, string, int, float, etc. When the scanner creates tokens, it creates a token object that has a variable of type TokenType (the enumerator variable we explored earlier) telling us what type of token is (so we know if it’s a value, a keyword, or something else).</p>
                     </div>
                     <br>
+
                     <div class="journal-accomplishments">
                         <h2 class="journal-subtitle">Accomplishments</h2>
                         <p class="journal-text">I’m working along with the craftinginterpreters.com tutorial and my progress is stored at: <a target="_blank" href="https://github.com/minn-language/minn-lang/tree/master/src/lox">this Github page</a>.</p><br>
 
-                        <p class="journal-text">Week 1</p>
+                        <p class="journal-text">Week 1 (10/14)</p>
                         <ul class="journal-list">
                             <li>I learned about what the scanner actually does, step by step, and now know how to make one myself from scratch.</li>
                             <li>I learned the basics of IntelliJ by using the learning plugin I installed with it. I can create and manage java projects in IntelliJ but I’m still learning shortcuts and workflow tricks.</li>
                         </ul>
 
-                        <p class="journal-text">Week 2</p>
+                        <p class="journal-text">Week 2 (10/21)</p>
                         <ul class="journal-list">
                             <li>I researched what makes C family languages unique and what statically typed languages do differently. I made a list of distinctions I want for my language at <a target="_blank" href="https://tinyurl.com/y6bnol9n">this google doc</a>.</li>
                             <li>I refreshed my memory on Java syntax by looking at code examples for scanners in Java and practicing simple code. I made a quick blackjack playing card program in Java to do my AP Statistics project.</li>
                         </ul>
 
-                        <p class="journal-text">Week 3</p>
+                        <p class="journal-text">Week 3 (10/28)</p>
                         <ul class="journal-list">
                             <li>I kept working on my website because the snow day and early dismissal disrupted my schedule for the week.</li>
                             <li>I did keep researching scanners and viewed more example code. I created the framework for my first prototype scanner.</li>
                         </ul>
 
-                        <p class="journal-text">Week 4</p>
+                        <p class="journal-text">Week 4 (11/4)</p>
                         <ul class="journal-list">
                             <li>Scanner research led me to enum (tokens) and regex research, which I understand both concepts quite well now to the point where I could use both of them in real programs.</li>
                             <li>I understand what lexemes are, along with lots of other important vocabulary to my project.</li>
@@ -266,6 +276,7 @@
                         </ul>
                     </div>
                     <br>
+
                     <div class="journal-reflection">
                         <h2 class="journal-subtitle">Reflection on Goals and Timeline</h2>
                         <h3 class="journal-text-header">Goals</h3>
@@ -273,6 +284,84 @@
 
                         <h3 class="journal-text-header">Timeline</h3>
                         <p class="journal-text">I feel like I need to revise my timeline after getting into my project because I’m going about my research differently. Although I’m achieving my timeline goals each week, the style of my research has changed. When I made my timeline I was planning on doing research on concepts then building it from scratch but I don’t learn well that way. I’ve quickly discovered that I learn very well from looking at examples and reverse engineering them, with supplemental theoretical reading. My current plan for research is to follow along with craftinginterpreters.com’s tutorial learning how to build an interpreter through practice, then go back and make a second interpreter myself from scratch with the knowledge I gained. I’m going to draft a new timeline to revise my schedule, my end accomplishments will be the same but I want to reorganize when I do different aspects of my project. I’m on schedule with my timeline now but soon I might become “off” my timeline even while being productive, simply because I ordered events in my timeline differently that I should have.</p>
+                    </div>
+                </div>
+
+                <div id="journal-2" class="journal">
+                    <h1 class="journal-title">Journal #2</h1>
+                    <div class="journal-goals">
+                        <h2 class="journal-subtitle">Weekly Goals</h2>
+                        <p class="journal-text">Week 1 (11/4) (Repeat from last Journal)</p>
+                        <ul class="journal-list">
+                            <li>Research lexemes, RegEx, and tokens to begin prototyping a scanner, following along on craftinginterpreters.com.</li>
+                            <li>Start constructing my first scanner prototype with craftinginterpreters's tutorial to understand the different necessary mechanisms inside the scanner.</li>
+                        </ul>
+                        <p class="journal-text">Week 2 (11/11)</p>
+                        <ul class="journal-list">
+                            <li>Continue the scanner portion of the craftinginterpreters.com tutorial.</li>
+                            <li>Continue researching C and Java syntax by looking at syntax references.</li>
+                            <li>Explore the possibility of using python in my language by researching the drawbacks/benefits of python. (If I want to use python, start refreshing myself on python syntax).</li>
+                        </ul>
+                        <p class="journal-text">Week 3 (11/18)</p>
+                        <ul class="journal-list">
+                            <li>Finish the scanner portion of the craftinginterpreters.com tutorial.</li>
+                            <li>Create a framkework for my own scanner after completeing the tutorial, it should have a main loop and be able to scan single character expressions.</li>
+                        </ul>
+                    </div>
+                    <br>
+                    
+                    <div class="journal-research">
+                        <h2 class="journal-subtitle">My Research and What I Learned</h2>
+                        <h3 class="journal-text-header"></h3>
+                        <p class="journal-text">
+
+                        </p><br>
+                    </div>
+                    <br>
+
+                    <div class="journal-accomplishments">
+                        <h2 class="journal-subtitle">Accomplishments</h2>
+                        <p class="journal-text">I’m working along with the craftinginterpreters.com tutorial and my progress is stored at: <a target="_blank" href="https://github.com/minn-language/minn-lang/tree/master/src/lox">this Github page</a>.</p><br>
+
+                        <p class="journal-text">Week 1 (11/4)</p>
+                        <ul class="journal-list">
+                            <li>Scanner research led me to enum (tokens) and regex research, which I understand both concepts quite well now to the point where I could use both of them in real programs.</li>
+                            <li>I understand what lexemes are, along with lots of other important vocabulary to my project.</li>
+                            <li>I continued to work on my first prototype scanner, following along on craftinginterpreters
+                                <ul class="journal-list">
+                                    <li>I broke down and understand the main scanner loop and how it iterates through the characters in the source code.</li>
+                                    <li>I implemented an enumerator variable for TokenType within my scanner.</li>
+                                    <li>I used regex within my main scanner loop.</li>
+                                    <li>I made a project in IntelliJ with multiple files to follow along with crafting interpreters in building a prototype scanner.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <p class="journal-text">Week 2 (11/11)</p>
+                        <ul class="journal-list">
+                            <li></li>
+                            <li></li>
+                        </ul>
+
+                        <p class="journal-text">Week 3 (11/18)</p>
+                        <ul class="journal-list">
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <br>
+
+                    <div class="journal-reflection">
+                        <h2 class="journal-subtitle">Reflection on Goals and Timeline</h2>
+                        <h3 class="journal-text-header">Goals</h3>
+                        <p class="journal-text">
+                            
+                        </p><br>
+
+                        <h3 class="journal-text-header">Timeline</h3>
+                        <p class="journal-text">
+
+                        </p>
                     </div>
                 </div>
             </div>
