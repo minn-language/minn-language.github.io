@@ -18,3 +18,8 @@ h1 {
     font-weight: bold;
     
 }
+
+.consolas {
+    font-family: "Consolas", sans-serif;
+    color: #000000;
+}
