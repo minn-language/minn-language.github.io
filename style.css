@@ -31,8 +31,8 @@
     text-decoration: none;
     color: white;
     font-size: 16pt;
-    line-height: 1.5;
-    transition: color 0.2s;
+    line-height: 1.9;
+    transition: color 0.4s;
 }
 
 .sidebar p a:hover {
@@ -45,6 +45,15 @@
     margin-top: 0px;
     margin-left: -300px;
     transition: margin 0.5s;
+}
+
+#updates-dropdown {
+    margin-left: 20px;
+    margin-bottom: 4px;
+}
+
+#updates-dropdown p a {
+    font-size: 15pt;
 }
 
 #language-links {
@@ -333,12 +342,17 @@
 /* ====================      Journals      ==================== */
 /* ============================================================ */
 
+#journals-subtitle {
+    margin-bottom: -50px;
+}
+
 .journal-title {
     color: var(--blue);
 }
 
 .journal {
     line-height: 1.3;
+    margin-top: 50px;
 }
 
 .journal h3 {
