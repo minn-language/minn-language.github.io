@@ -387,7 +387,14 @@
     margin-bottom: 20px;
 }
 
+#dinner {
+    max-height: 360px;
+}
 
+#dinner2 {
+    margin-bottom: 90px;
+    margin-left: 80px;
+}
 
 /* ============================================================ */
 /* ====================      Timeline      ==================== */

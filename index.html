@@ -20,6 +20,7 @@
             <div id="updates-dropdown">
                 <p><a class="sub-sidebar-link" href="#journal-1">Journal #1</a></p>
                 <p><a class="sub-sidebar-link" href="#journal-2">Journal #2</a></p>
+                <p><a class="sub-sidebar-link" href="#journal-3">Journal #3</a></p>
             </div>
             <p><a class="sidebar-link" href="#project-timeline">Timeline</a></p>
             <p><a class="sidebar-link" href="#bibliography">Bibliography</a></p>
@@ -211,25 +212,25 @@
                     <h1 class="journal-title">Journal #1</h1>
                     <div class="journal-goals">
                         <h2 class="journal-subtitle">Weekly Goals</h2>
-                        <p class="journal-text">Week 1 (10/14)</p>
+                        <p class="journal-text">Week 1</p>
                         <ul class="journal-list">
                             <li>Research the necessary parts of a basic programming language implementation on craftinginterpreters.com.</li>
                             <li>Learn how to use IntelliJ by using the "learn IDEA plugin," talking to Sub, and finding videos online.</li>
                         </ul><br>
 
-                        <p class="journal-text">Week 2 (10/21)</p>
+                        <p class="journal-text">Week 2</p>
                         <ul class="journal-list">
                             <li>Research what makes C-family languages unique (allowing null/global variables, inheritance, etc.) and make a list of each distinction I've found.</li>
                             <li>Refamiliarize myself with Java syntax by looking at other people's Java code and researching file/string manipulation functions in Java and practicing.</li>
                             <li>Start learning C syntax by looking at C code and using a C syntax reference like cprogramming.com.</li>
                         </ul><br>
 
-                        <p class="journal-text">Week 3 (10/28)</p>
+                        <p class="journal-text">Week 3</p>
                         <ul class="journal-list">
                             <li>Recover from the snow day and early dismissal and try to stay on my timeline.</li>
                         </ul><br>
 
-                        <p class="journal-text">Week 4 (11/4)</p>
+                        <p class="journal-text">Week 4</p>
                         <ul class="journal-list">
                             <li>Research lexemes, RegEx, and tokens to begin prototyping a scanner, following along on craftinginterpreters.com.</li>
                             <li>Start constructing my first scanner prototype with craftinginterpreters's tutorial to understand the different necessary mechanisms inside the scanner.</li>
@@ -314,20 +315,20 @@
                     <h1 class="journal-title">Journal #2</h1>
                     <div class="journal-goals">
                         <h2 class="journal-subtitle">Weekly Goals</h2>
-                        <p class="journal-text">Week 1 (11/4) (Repeat from last Journal)</p>
+                        <p class="journal-text">Week 4 (Repeat from last Journal)</p>
                         <ul class="journal-list">
                             <li>Research lexemes, RegEx, and tokens to begin prototyping a scanner, following along on craftinginterpreters.com.</li>
                             <li>Start constructing my first scanner prototype with craftinginterpreters's tutorial to understand the different necessary mechanisms inside the scanner.</li>
                         </ul><br>
 
-                        <p class="journal-text">Week 2 (11/11)</p>
+                        <p class="journal-text">Week 5</p>
                         <ul class="journal-list">
                             <li>Continue the scanner portion of the craftinginterpreters.com tutorial.</li>
                             <li>Continue researching C and Java syntax by looking at syntax references.</li>
                             <li>Explore the possibility of using python in my language by researching the drawbacks/benefits of python. (If I want to use python, start refreshing myself on python syntax).</li>
                         </ul><br>
 
-                        <p class="journal-text">Week 3 (11/18)</p>
+                        <p class="journal-text">Week 6</p>
                         <ul class="journal-list">
                             <li>Finish the scanner portion of the craftinginterpreters.com tutorial.</li>
                             <li>Create a framkework for my own scanner after completeing the tutorial, it should have a main loop and be able to scan single character expressions.</li>
@@ -404,6 +405,127 @@
 
                         <h3 class="journal-text-header">Timeline</h3>
                         <p class="journal-text">As far as my timeline goes, it still needs to be revised. I have been following along with the craftinginterpreters tutorial and haven’t started my own scanner yet. With my current pace I’ll be ahead of schedule on the large scale deadlines I set for myself (like finish the basic scanner, the basic parser, the advanced scanner, and advanced parser) but the small guiding deadlines regarding my research are still off. I’m doing all the research ahead of time during the tutorial, then building my own scanner after the tutorial, whereas my initial timeline had me researching a small amount, building a small amount, then researching further, then building further, etc.</p>
+                    </div>
+                </div>
+
+                <div id="journal-3" class="journal">
+                    <h1 class="journal-title">Journal #3</h1>
+                    <div class="journal-goals">
+                        <h2 class="journal-subtitle">Weekly Goals</h2>
+                        <p class="journal-text">Week 7</p>
+                        <ul class="journal-list">
+                            <li>Start research on a parser which turns the tokens of the scanner into a syntax tree.</li>
+                            <li>Learn what syntax trees are and how they're represented in actual java code.</li>
+                            <li>Type up my job shadow report.</li>
+                        </ul><br>
+
+                        <p class="journal-text">Week 8</p>
+                        <ul class="journal-list">
+                            <li>Continue research and work on the parser.</li>
+                            <li>Begin revamping my inintial project presentation into my midyear presentation.</li>
+                        </ul><br>
+
+                        <p class="journal-text">Week 9</p>
+                        <ul class="journal-list">
+                            <li>Work on Journal #3 by finishing initial research on parsers.</li>
+                            <li>Type up a syntactical grammar reference (effectively a list of grammar rules to determine which "sentences" are valid and which are not).</li>
+                        </ul>
+                    </div>
+                    <br>
+                    
+                    <div class="journal-research">
+                        <h2 class="journal-subtitle">My Research and What I Learned</h2>
+                        <p class="journal-text">All research done for this Journal comes from craftinginterpreters.com, in my bibliography.</p>
+                        <h3 class="journal-text-header">Syntactic Grammar</h3>
+                        <p class="journal-text">
+                            Earlier we created the scanner, which essentially chunked our program of characters into words called "tokens". The next step in the process is the parser, which will take the words and make them into sentences, only if they are in a coherent order.<br><br>
+
+                            Syntactic grammar is needed to explain the structure of our sentences similar to how our lexical grammar explained our vocabulary. This is similar to how languages have definite words (food is a word, xxfhed is not, this is lexical grammar) and sentence structure rules (need at least 1 noun and 1 verb, this is syntactic grammar).<br><br>
+
+                            This syntactic grammar moves up a level on something called the Chomsky hierarchy. The Chomsky hierarchy essentially categorizes the usefulness and scope of different grammars. Our new syntactic grammar is something called a context-free grammar while our previous, lexical grammar was a regular grammar. Our syntactic grammar is a level above our lexical grammar on the Chomsky heirarchy because it has a level of abstraction. It deals with if "sentences" are valid, whereas a regular grammar, with a smaller scope, deals with if "words" are valid. The regular grammar (scanner) uses characters as building blocks and the context-free grammar (parser) uses words as building blocks.<br><br>
+
+                            This context free grammar is a set of rules called productions, each with a head (its name), and a body (the actual rule within the grammar). A "grammar rule" with a "name" and "instructions" reworded into this language vocabulary is a "production" with a "head" and a "body". A basic example of a production for english sentences might have the head of "sentence" and the body of "noun verb". This production is used for creating sentences and the body says that a sentence is only valid if it has both the components, a noun and a verb. The components of a body of a production are called symbols.<br><br>
+
+                            Symbols are basically a word in the sentence of the production. For example a production with the body "noun verb" has two symbols, noun and verb. A body of "noun verb adjective noun" has four symbols. Symbols can also either be terminal (which are simply words in the vocabluary of the language), or nonterminal (which are pointers to other productions within the grammar). It’s also important to note that multiple productions can share the same head, each with different bodies that can be chosen. For example, the production "sentence" can have both the heads of "noun verb" and "noun verb adjective verb", both are valid productions of sentences.<br><br>
+
+                            An example of a context free grammar for ordering dinner is shown below. To help read this, anything on the left of an arrow is a head, like "dinner" or "entree" and the things to the right are bodies connected to that head. The "|" simply means that head can connect to any of the listed bodies, for example selecting "side" could either return "garlic bread" or "salad" or any other listed options. The four productions in this grammar are dinner, entree, side, and beverage. They combine to allow many different meals to be made with only a short set of rules.<br>
+
+                            <img id="dinner" src="images/code-examples/dinner.JPG">
+
+                            <img id="dinner2" src="images/code-examples/dinner2.JPG"><br>
+
+                            To help further explain types of symbols, anything in a body that's blue is nonterminal, anything red is a fixed value terminal and anything green is a terminal of varying value. Let's say you want to order dinner, you start with the production "dinner", from there you select "entree 'with' side". At that point you have 2 nonterminals, entree and side, which you still need to make decisions on, but the "with" is terminal and a final part of your order. You see you have to decide on an entree, so you go to the entree production, and select the "pizza" option. Now your current dinner order is "'pizza' 'with' side" and you still need to decide your side. You go to the side production, and select "NUMBER side" making your order "'pizza' 'with' NUMBER side". "NUMBER" is a terminal symbol, but of varying value, so you get to choose a number, 3 in this case. At the same time you see that you have the nonterminal symbol "side" still in your order, so you select "garlic bread". Now every symbol in your order is terminal, so there is nowhere left to go. Your dinner order is now "pizza with 3 garlic bread" which is coherent. These rules prevent you from ordering something incoherent like "with with salad pizza 5 5 water". The same principal applies when creating a language or programming language, we need to have rules to create coherent sentences, we need a syntactic grammar for our language.<br><br>
+
+                            This whole time talking about syntactic grammar, we have also been talking about syntax trees. Syntax trees are just the tree structures that these grammars can follow. The root of "dinner" splits into the branches of "entree" "with" and "side", of which "entree" continues onto "pizza" and "side" splits into "NUMBER" and "side" which both further grow into "3" and "garlic bread" respectively. These trees can become extremely long and complex, especially with recursive calls like how "side" could produce "side 'and' side", allowing for infinte sides to be ordered.<br><br>
+                        </p>
+                        <h3 class="journal-text-header">Implementing Syntax Trees</h3>
+                        <p class="journal-text">
+                            Although it seems kind of useless right now, we are going to program another data structure that helps the parser and interpreter to communicate and manipulate the syntax trees. Because this interpreter is being built in Java, an object-oriented language, every type of token, every expression, gets its own class in this new data structure.<br><br>
+                        </p>
+                        <h3 class="jounral-text-header">The Expression Problem</h3>
+                        <p class="journal-text">
+                            The issue with programming our new data structure with individual classes comes when we try to manipulate the data. Each individual class has unique attributes and a unique context in which we need to operate on it. Baking a cake and baking brownies are different, similar, but slightly different. When we want to add a new operation to all our expression classes, we would have to go back and write a new method for every single class, which is horribly time consuming and inefficient. The good thing about object-oriented programming languages is that you can easily add a new expression class when you want to add new expressions.<br><br>
+
+                            Functional programming languages are exactly the opposite. Because data and behavior is seperate, to add a new operation to all data, you simply write a function. The difficulty with function programming languages is that adding a new expression requires you to adapt every single operation function to accomodate the uniqueness of the new expression.<br><br>
+                            
+                            You can think of expressions as rows in a grid, and operations as columns. Object-oriented languages are good at adding rows, while functional programming languages are good at adding columns. This is called the expression problem because nobody has found a way to easily add both expressions and operations, nobody has found a way to add both rows and columns efficiently.<br><br>
+                        </p>
+                        <h3 class="journal-text-header">The Visitor Pattern</h3>
+                        <P class="journal-text">
+                            The visitor pattern is a design pattern used in object oriented languages to help us add operations in the expression problem more easily. In reality, it mimics the behaviour of functional programming languages within object-oriented languages, which can help us to minimize the inefficiencies of using an object-oriented language posed by the expression problem.<br><br>
+
+                            To implement the visitor pattern, we create an interface with abstract “visitor” methods for each expression class in our program. To add a new operation, we can create a new class that implements the interface, and complete the abstract visitor methods to have any desired operation (even with any neccessary customization for each expression specifically).<br><br>
+
+                            Below is the first part of what we described above, an interface with abstract methods for each of our "expressions", in this case we are using cake and brownies as our expressions, and we will eventually add the operation "bake".<br><br>
+
+                            <img src="images/code-examples/bakedVisitor.JPG"><br>
+
+                            The next image is the operation "bake". It finishes the methods visitCake and visitBrownie with specific code about baking brownies or baking a cake.<br><br>
+
+                            <img src="images/code-examples/bake.JPG"><br>
+
+                            The next step is to add an “accept” method into each of the existing expression classes. The accept method takes a visitor object and calls the appropriate visit method for that expression type. This allows us to simply call the accept method on any expression, and pass it the operation we want to perform. It doesn't matter what type of expression it is, you can always call accept, because each expression inherits accept from the abstract parent class. Calling cake.accept() and brownie.accept() are both valid, and you can pass either, whichever operation you want to perform. Instead of having to call a different method name for each expression/operation combonation, you simply call "expression.accept(operation)" and it's universally accepted.<br><br>
+
+                            Here's an example of an abstract parent class, from which cake and brownie inherit and override the accept class. Each expression's accept method calls the appropriate visit method, from the appropriate operation.<br><br>
+
+                            <img src="images/code-examples/bakedGood.JPG">
+
+                        </P>
+                    </div>
+                    <br>
+
+                    <div class="journal-accomplishments">
+                        <h2 class="journal-subtitle">Accomplishments</h2>
+                        <p class="journal-text">Week 7</p>
+                        <ul class="journal-list">
+                            <li>I began research on the parser, which led me to begin research on context-free grammars and syntax trees.</li>
+                            <li>I was still researching syntax trees at this point, and didn't fully understand them yet though.</li>
+                            <li>I completed and turned in my job shadow report.</li>
+                        </ul><br>
+
+                        <p class="journal-text">Week 8</p>
+                        <ul class="journal-list">
+                            <li>I further researched parsers, now fully understanding context-free grammar, syntax trees, and the expression problem. I started reading on the visitor problem as well.</li>
+                            <li>I've started working on my midyear presentation, just adding in accomplishments and changing the plans I've completed into progress updates.</li>
+                        </ul><br>
+                        
+
+                        <p class="journal-text">Week 9</p>
+                        <ul class="journal-list">
+                            <li>This journal was probably the biggest accomplishment of the past few weeks because of all the research I had to put into it. I tried to summarize the best I could, shortening a lot of the information I took in.</li>
+                            <li>I wasn't able to finish my own syntactic grammar reference this week. I did make a short one about ordering dinner to demonstrate my understading in the research secion, but the much larger one for my language isn't made yet.</li>
+                            <img id="dinner" src="images/code-examples/dinner.JPG">
+                        </ul>
+                    </div>
+                    <br>
+
+                    <div class="journal-reflection">
+                        <h2 class="journal-subtitle">Reflection on Goals and Timeline</h2>
+                        <h3 class="journal-text-header">Goals</h3>
+                        <p class="journal-text">I've been pretty consistently hitting my goals, except for the last one of week 9. Although I feel I'm working at a pretty good pace, I want to pick it up. I want to be able to refine my project and hit stretch goals, so I want to get ahead over weekends.</p><br>
+
+                        <h3 class="journal-text-header">Timeline</h3>
+                        <p class="journal-text">Along with my goals, I've been keeping up with my timeline marks pretty well. I've been on schedule but I want to get ahead of schedule to do more with my project. I revised my timeline a little while ago, just reordering some goals and it's been a lot more on track than before. I think I'm in a good place right now, I'm just trying to put myself into a great place.</p>
                     </div>
                 </div>
             </div>
