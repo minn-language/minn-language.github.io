@@ -21,9 +21,10 @@
 
 #sidebar-logo {
     width: 46px;
-    margin-left: 7px;
     margin-top: 25px;
-    transition: margin 0.5s;
+    margin-left: 7px;
+    transform: translate(260px);
+    transition: transform 0.5s;
 }
 
 .sidebar p a {
@@ -32,19 +33,14 @@
     color: white;
     font-size: 16pt;
     line-height: 1.9;
-    transition: color 0.4s;
-}
-
-.sidebar p a:hover {
-    color: #aaaaaa;
 }
 
 #project-links {
+    transform: translate(-45px, 0px);
     padding: 20px 60px;
     white-space: nowrap;
     margin-top: 0px;
-    margin-left: -300px;
-    transition: margin 0.5s;
+    transition: transform 0.5s;
 }
 
 #updates-dropdown {
@@ -56,33 +52,11 @@
     font-size: 15pt;
 }
 
-#language-links {
-    padding: 20px 60px;
-    white-space: nowrap;
-    margin-left: -300px;
-    transition: margin 0.5s;
-}
-
 #sidebar-container {
-    width: 60px;
-    transition: width 0.5s;
-    overflow: hidden;
-}
-
-#sidebar-container:hover {
     width: 320px;
-}
-
-#sidebar-container:hover #project-links {
-    margin-left: -15px;
-}
-
-#sidebar-container:hover #sidebar-logo {
-    margin-left: 45px;
-}
-
-#sidebar-container:hover #language-links {
-    margin-left: -15px;
+    transform: translate(-260px, 0px);
+    transition: transform 0.5s;
+    overflow: hidden;
 }
 
 #chevron {
@@ -92,9 +66,6 @@
     right: 10px;
     transition: opacity 0.5s;
     opacity: 90%;
-    /* animation-name: chevron; */
-    /* animation-duration: 1.3s; */
-    /* animation-iteration-count: infinite; */
 }
 
 @keyframes chevron {
@@ -115,6 +86,23 @@
     opacity: 0%;
 }
 
+#sidebar-container:hover {
+    transform: translate(0px, 0px);
+}
+
+#sidebar-container:hover #project-links {
+    transform: translate(0px, 0px);
+}
+
+#sidebar-container:hover #sidebar-logo {
+    transform: translate(38px);
+}
+
+#updates-link a {
+    color: #aaaaaa;
+    cursor: default;
+}
+
 /* ============================================================ */
 /* ====================        Hero        ==================== */
 /* ============================================================ */
@@ -128,12 +116,28 @@
     padding: 160px 7vw;
 }
 
+.hero-small {
+    background: linear-gradient(120deg, rgba(70,70,70,1) 0%, rgba(70,70,70,1) 64.95%, rgba(255,255,255,1) 65.05%, rgba(255,255,255,1) 78.95%, rgba(62,154,240,1) 79.05%, rgba(62,154,240,1) 100%);
+    max-width: calc(100vw - 60px);
+    margin-left: 60px;
+    color: white;
+    box-shadow: 10px 2px 30px #333333;
+    padding: 70px 7vw;
+}
+
 #main-logo {
     width: 540px;
     margin-left: 80px;
 }
 
 #hero p {
+    max-width: 53%;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.hero-small p {
     max-width: 53%;
     margin-top: 30px;
     text-align: center;
@@ -160,6 +164,17 @@
     color: white;
 }
 
+.page-title {
+    font-family: "Consolas";
+    color: var(--blue);
+    font-size: 75px;
+    margin-left: 80px;
+}
+
+.page-desc {  
+    min-width: 570px;
+}
+
 /* ============================================================ */
 /* ====================     Main Page      ==================== */
 /* ============================================================ */
@@ -173,6 +188,11 @@
 
 #main-content div {
     background-color: white;
+}
+
+#content-wrapper {
+    padding-bottom: 65px;
+    padding-top: 65px;
 }
 
 .subtitle {
@@ -352,7 +372,10 @@
 
 .journal {
     line-height: 1.3;
-    margin-top: 50px;
+}
+
+.journal div {
+    margin-top: 25px;
 }
 
 .journal h3 {
@@ -362,6 +385,7 @@
 .journal-subtitle {
     color: var(--blue);
     margin-bottom: 8px;
+    font-size: 21pt;
 }
 
 .journal-list {

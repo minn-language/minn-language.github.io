@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway:400,500&display=swap" rel="stylesheet">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
+    <title>Minn Programming Language</title>
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+</head>
+<body>
+    <div id="sidebar-container" class="sidebar">
+        <img class="" id="sidebar-logo" src="images/minn_light.png">
+        <div id="project-links">
+            <h2>The Project</h2>
+            <p><a class="sidebar-link" href="index.html">Overview & Advisors</a></p>
+            <p><a class="sidebar-link" href="goals.html">Weekly Goals</a></p>
+            <p id="updates-link">
+                <a class="sidebar-link" href="#updates">Journals</a>
+            </p>
+            <div id="updates-dropdown">
+                <p><a class="sub-sidebar-link" href="journal-1.html">Journal #1</a></p>
+                <p><a class="sub-sidebar-link" href="journal-2.html">Journal #2</a></p>
+                <p><a class="sub-sidebar-link" href="journal-3.html">Journal #3</a></p>
+            </div>
+            <p><a class="sidebar-link" href="timeline.html">Timeline</a></p>
+            <p><a class="sidebar-link" href="bibliography.html">Bibliography</a></p>
+        </div>
+        <img id="chevron" src="images/chevron.png">
+    </div>
+
+    <div class="hero-small">
+        <h1 class="page-title">Journal 2</h1>
+        <p class="page-desc">Second journal, smaller than the first because this covers 2 weeks and the first covered 4. Research covered includes maps, Java, and Python.</p>
+    </div>
+
+    <div id="main-content">
+        <div id="content-wrapper">
+            <div id="journal-2" class="journal">
+                <div class="journal-goals">
+                    <h2 class="journal-subtitle">Weekly Goals</h2>
+                    <p class="journal-text">Week 4 (Repeat from last Journal)</p>
+                    <ul class="journal-list">
+                        <li>Research lexemes, RegEx, and tokens to begin prototyping a scanner, following along on craftinginterpreters.com.</li>
+                        <li>Start constructing my first scanner prototype with craftinginterpreters's tutorial to understand the different necessary mechanisms inside the scanner.</li>
+                    </ul><br>
+
+                    <p class="journal-text">Week 5</p>
+                    <ul class="journal-list">
+                        <li>Continue the scanner portion of the craftinginterpreters.com tutorial.</li>
+                        <li>Continue researching C and Java syntax by looking at syntax references.</li>
+                        <li>Explore the possibility of using python in my language by researching the drawbacks/benefits of python. (If I want to use python, start refreshing myself on python syntax).</li>
+                    </ul><br>
+
+                    <p class="journal-text">Week 6</p>
+                    <ul class="journal-list">
+                        <li>Finish the scanner portion of the craftinginterpreters.com tutorial.</li>
+                        <li>Create a framkework for my own scanner after completeing the tutorial, it should have a main loop and be able to scan single character expressions.</li>
+                    </ul>
+                </div>
+                <br>
+                
+                <div class="journal-research">
+                    <h2 class="journal-subtitle">My Research and What I Learned</h2>
+                    <h3 class="journal-text-header">Maps</h3>
+                    <p class="journal-text"><span class="consolas">map</span> is a data type in Java I researched this week to help implement the rest of the scanner. The basic form of a map is called a hashmap and is essentially a key/value database for variable values. I’ll use this for multi-character keywords in the language. Single character keywords like <span class="consolas">(</span> and <span class="consolas">+</span> are implemented in the switch case because they aren’t involved in any longer keywords unlike how <span class="consolas">/</span> and <span class="consolas"><</span> are also included in <span class="consolas">//</span> and <span class="consolas"><=</span>. Maps are useful for longer character keywords and I’ll end up using one for longer character keywords (Nystrom). They allow me to input a string and if it’s found in the map, retrieve the correct corresponding value. An example of this can be shown with letter grades and corresponding GPA’s. To a program, the letter A and the number 4 have no inherent connection but with a map, we can create one (Garg).</p>
+                    <img src="images/code-examples/map-theory.JPG">
+
+                    <h3 class="journal-text-header">Java Syntax</h3>
+                    <p class="journal-text">Building the scanner requires lots of new syntax for Java that I researched along the way. Maps are declared with the syntax <span class="consolas">Map&lt;keyType, valueType></span> and defined with <span class="consolas">new HashMap<>()</span>. Key and value pairs are then added to the hashmap by using <span class="consolas">mapName.put(key, value)</span> (Garg). I would normally add every key and value pair in the constructor but we can make our code more organized by using static { } with the variable declarations. This just runs a small chunk of static code outside of any method (Nystrom).</p><br>
+
+                    <h3 class="journal-text-header">Python</h3>
+                    <p class="journal-text">Because Python is an interpreted and not compiled language, it runs quite a bit slower than Java or C/C++ which are compiled. (<a target="_blank" href="https://softwareengineering.stackexchange.com/questions/24558/is-python-interpreted-or-compiled">This StackOverflow Issue</a>). Because I am likely writing an interpreter and not a compiler, I decided to not use Python. I want my interpreter to be reasonably fast and using a slower language to run a slower program will make it much harder for that to happen. I also am already learning necessary Java syntax through the craftinginterpreters tutorial so if I use Java to build my language, I have to do less research into Python syntax.</p>
+                </div>
+                <br>
+
+                <div class="journal-accomplishments">
+                    <h2 class="journal-subtitle">Accomplishments</h2>
+                    <p class="journal-text">I’m working along with the craftinginterpreters.com tutorial and my progress is stored at: <a target="_blank" href="https://github.com/minn-language/minn-lang/tree/master/src/lox">this Github page</a>.</p><br>
+
+                    <p class="journal-text">Week 1 (11/4) (Repeat - All supporting research included in journal #1)</p>
+                    <ul class="journal-list">
+                        <li>Scanner research led me to enum (tokens) and regex research, which I understand both concepts quite well now to the point where I could use both of them in real programs.</li>
+                        <li>I understand what lexemes are, along with lots of other important vocabulary to my project.</li>
+                        <li>I continued to work on my first prototype scanner, following along on craftinginterpreters
+                            <ul class="journal-list">
+                                <li>I broke down and understand the main scanner loop and how it iterates through the characters in the source code.</li>
+                                <li>I implemented an enumerator variable for TokenType within my scanner.</li>
+                                <li>I used regex within my main scanner loop.</li>
+                                <li>I made a project in IntelliJ with multiple files to follow along with crafting interpreters in building a prototype scanner.</li>
+                            </ul>
+                        </li>
+                    </ul><br>
+
+                    <p class="journal-text">Week 2 (11/11)</p>
+                    <ul class="journal-list">
+                        <li>I worked to implement whitespace recognition in the scanner loop, so any spaces, tabs, or new lines are skipped over and not added as tokens.</li>
+                        <li>I also implemented slashes, as they can be used for comments or actual code. Similar to the way <span class="consolas">!</span> and <span class="consolas">!=</span> were implemented last journal, it checks what’s after the first slash, to tell if the source code is <span class="consolas">/</span> or <span class="consolas">//</span> and in the case of <span class="consolas">//</span>, uses a new “peek” helper method to skip to the next line without adding a new token.</li>
+                        <li>I finally decided not to use Python in my language due to its lack of speed and my prior knowledge with Java.</li><br>
+
+                        <p>Here are examples of achievements with internal comments to explain what the code does:</p>
+                        <p>Detecting slashes</p>
+                        <img id="comments-example" src="images/code-examples/comments.JPG">
+                        <p>The peek method</p>
+                        <img id="peek-example" src="images/code-examples/peek.JPG">
+                        <p>The addToken method</p>
+                        <img id="addToken-example" src="images/code-examples/addToken.JPG">
+                        <p>The match method</p>
+                        <img id="match-example" src="images/code-examples/match.JPG">
+                    </ul><br>
+                    
+
+                    <p class="journal-text">Week 3 (11/18)</p>
+                    <ul class="journal-list">
+                        <li>I finished the scanner on the craftinginterpreters tutorial, specifically adding longer keywords using a map. There's much more added that would take up too much space in images. I recently pushed changed to the github <a target="_blank" href="https://github.com/minn-language/minn-lang/tree/master/src/lox">here</a>. An image of the map I created can be found below:</li>
+                        <img id="map-example" src="images/code-examples/map.JPG">
+                    </ul>
+                </div>
+                <br>
+
+                <div class="journal-reflection">
+                    <h2 class="journal-subtitle">Reflection on Goals and Timeline</h2>
+                    <h3 class="journal-text-header">Goals</h3>
+                    <p class="journal-text">
+                        I’ve fallen somewhat behind my goals for this week as a lot of my time was spent not working on my actual project this week. The first Journal I did was graded and passed back so I was reviewing and editing my Journal to make corrections. I also didn’t know that the first Journal was supposed to be 3 weeks long, not 4 weeks so this Journal will be shorter than normal at only 2 real weeks of research/reflection to get back on schedule. I’ve been counting the last week of journal #1 as this journal’s first week.<br>
+                        Throughout the second week, I continued with the scanner portion of the craftinginterpreters.com tutorial. As I’ve gone, I’ve continued to learn more Java syntax, more specifically learning about helper methods and string manipulation functions. I do not plan to incorporate Python into my project as it would require extra research into the syntax of the language, whereas I’m constantly learning about Java syntax and scanner implementation at the same time on craftinginterpreters.com. It’s also slower than Java and as I’ll be writing fairly unoptimized code to start, so I don’t want Python slowing down my program anymore than it already may be.<br>
+                        During the second week, I finished the scanner tutorial. I am a bit behind and haven’t created my own scanner’s framework as I got distracted working on my website/journals, but I plan to catch up over the long Thanksgiving weekend. I also have my job shadow during the 27th where I plan to ask Mr. Jurow questions about my project and the plans I have for it.
+                    </p><br>
+
+                    <h3 class="journal-text-header">Timeline</h3>
+                    <p class="journal-text">As far as my timeline goes, it still needs to be revised. I have been following along with the craftinginterpreters tutorial and haven’t started my own scanner yet. With my current pace I’ll be ahead of schedule on the large scale deadlines I set for myself (like finish the basic scanner, the basic parser, the advanced scanner, and advanced parser) but the small guiding deadlines regarding my research are still off. I’m doing all the research ahead of time during the tutorial, then building my own scanner after the tutorial, whereas my initial timeline had me researching a small amount, building a small amount, then researching further, then building further, etc.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
