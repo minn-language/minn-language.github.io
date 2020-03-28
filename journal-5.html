@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway:400,500&display=swap" rel="stylesheet">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}"/>
+    <title>Minn Programming Language</title>
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+</head>
+<body>
+    <div id="sidebar-container" class="sidebar">
+        <img class="" id="sidebar-logo" src="images/minn_light.png">
+        <div id="project-links">
+            <h2>The Project</h2>
+            <p><a class="sidebar-link" href="index.html">Overview & Advisors</a></p>
+            <p><a class="sidebar-link" href="goals.html">Weekly Goals</a></p>
+            <p id="updates-link">
+                <a class="sidebar-link" href="#updates">Journals</a>
+            </p>
+            <div id="updates-dropdown">
+                <p><a class="sub-sidebar-link" href="journal-1.html">Journal #1</a></p>
+                <p><a class="sub-sidebar-link" href="journal-2.html">Journal #2</a></p>
+                <p><a class="sub-sidebar-link" href="journal-3.html">Journal #3</a></p>
+                <p><a class="sub-sidebar-link" href="journal-4.html">Journal #4</a></p>
+                <p><a class="sub-sidebar-link" href="journal-5.html">Journal #5</a></p>
+            </div>
+            <p><a class="sidebar-link" href="timeline.html">Timeline</a></p>
+            <p><a class="sidebar-link" href="bibliography.html">Bibliography</a></p>
+        </div>
+        <img id="chevron" src="images/chevron.png">
+    </div>
+
+    <div class="hero-small">
+        <h1 class="page-title">Journal 5</h1>
+        <p class="page-desc">Fifth journal, covering my research on statements, variables, and environments.</p>
+    </div>
+
+    <div id="main-content">
+        <div id="content-wrapper">
+            <div id="journal-3" class="journal">
+                <div class="journal-goals">
+                    <h2 class="journal-subtitle">Weekly Goals</h2>
+                    <p class="journal-text">Week 13</p>
+                    <ul class="journal-list">
+                        <li>Respec the parser to minn's language requirements. It needs to have a working nested output and evaluate all the simple grammar in the Minn scanner.</li>
+                        <li>Finish the Lox interpreter and begin to respec that into an interpreter for Minn (at least have the visitor pattern structure done).</li>
+                    </ul><br>
+
+                    <p class="journal-text">Week 14</p>
+                    <ul class="journal-list">
+                        <li>Finish respeccing the basic parser to minn's language requirements.</li>
+                        <li>Start respeccing the basic interpreter to minn's language requirements.</li>
+                    </ul><br>
+
+                    <p class="journal-text">Week 15</p>
+                    <ul class="journal-list">
+                        <li>Finish respeccing the basic interpreter to minn's language requirements.</li>
+                        <li>Complete research on implementing statements and state.</li>
+                        <li>Complete research on variables.</li>
+                    </ul><br>
+
+                    <p class="journal-text">Week 16</p>
+                    <ul class="journal-list">
+                        <li>Fix the issues that came from finishing the minn interpreter and parser, such as the token print issue where it displays the data locations of the tokens and not the data in the tokens.</li>
+                        <li>Start researching environments and think about how to implement them into minn.</li>
+                    </ul>
+                </div>
+                <br>
+                
+                <div class="journal-research">
+                    <h2 class="journal-subtitle">My Research and What I Learned</h2>
+                    <h3 class="journal-text-header">Statements and State</h3>
+                    <p class="journal-text">
+                        Currently my language can only evaluate one expression, it can't hold variables and it can only comprehend one line of instruction. Statements will allow my program to have variables, print to a console, and evaluate multiple lines of instruction - all of which are necessary for a functioning programming language.<br><br>
+
+                        Statements are actually incredibly easy to implement into a programming language if expressions are already implemented. Instead of our entire language being one expression as it operates currently, our programs should be a series of statements, which are either expressions (an operation, like math, comparison, or logic) or declarations (like variables being created or printing an output to the console). In order to implement these statements, I just change the syntactic grammar of the language (as covered in Journal 3) and make the very first rule of our grammar any number of statements, and add a new rule where statements are either expressions (everything I've worked with in the language up until now) or declarations (variable creation or print statements).<br><br>
+
+                        Additionally, I will have to change the parser's and interpreter's behaviors to parse and interpret the list of statements seperately, but that is quite easy. I just have to convert the parser and interpreter inputs from an individual expression object, to an ArrayList of statement objects.<br><br>
+
+                        <img id="statements" src="images/code-examples/journal_5/statement_syntactic_grammar.PNG"><br>
+
+                        The image above shows how the syntactic grammar, the structure of my language, will change with statements. There is still full functionality that I had before with expressions, but by changing the structure I allow more than just one expression, along with a new type of statement, declarations, that will be used to implement variables into the language.<br><br>
+                    </p>
+                    <h3 class="journal-text-header">Variables</h3>
+                    <p class="journal-text">
+                        The implementation of variables is fairly easy in the language already. In the scanner, the keywords for var and = are already recognized, along with the value of the variable being recognized as a value and the name as an identifier.<br><br>
+
+                        In the parser, I will rewrite the strucutre of the code to reflect the changes made above to the syntactic grammar. Each statement will be checked if it's a variable declaration. If the statement is a variable declaration, it parses it as such, returning instructions to the interpreter to store the value. If the statement is actually just an expression, it's passed through the part of the parser I've already written.<br><br>
+
+                        Finally, in the interpreter, variable declarations will affect an "environment" where all the variable's names and values are stored and updated, allowing for future reference. Additionally the primary type expression (just data like numbers and strings) will now include an indentifier sub-type so any plain identifiers recognized in the code become references to stored variables, allowing users to reference the variables they've declared, adding functionality to the programming language.<br><br>
+                    
+                        There's more functionality that can be added to variables, such as scope limiting, unmutable variables, and reassignment, but those can be added quickly later down the line and are less important than adding functions which I will be researching very soon.<br><br>
+                    </p>
+                    <h3 class="journal-text-header">Environments</h3>
+                    <p class="journal-text">
+                        Environments are incredibly simple and most of the research, it turns out, is something I've already worked with on this project. Basically an environment is just a hash map (as researched in journal 2) and is a key/value storage of variable names and their respective values. This environment allows variables to be added when they're declared, and later referenced by the interpreter when evaluating expressions that contain references to stored values.<br><br>
+
+                        Everything in the research section of this journal was researched on craftinginterpreters.comr
+                    </p>
+                </div>
+                <br>
+
+                <div class="journal-accomplishments">
+                    <h2 class="journal-subtitle">Accomplishments</h2>
+                    <p class="journal-text">Week 13</p>
+                    <ul class="journal-list">
+                        
+                    </ul><br>
+
+                    <p class="journal-text">Week 14</p>
+                    <ul class="journal-list">
+                        
+                    </ul><br>
+                    
+
+                    <p class="journal-text">Week 15</p>
+                    <ul class="journal-list">
+                        <li>I did finish respeccing the basic interpreter to minn's language requirements, it can evaluate simple mathematical expressions and adheres to the syntax I designed for minn.</li>
+                        <li>Aside from finishing the respeccing so far, almost all of my other accomplishments were research related. I completed research on statements and state, along with implementing variables on a basic level, as both are reported above in this journal.</li>
+                    </ul><br>
+
+                    <p class="journal-text">Week 16</p>
+                    <ul class="journal-list">
+                        <li>I started and actually finished researching enviornments and their implementation because they were far easier than I thought they would be, see the research secion above for more information on environments.</li>
+                    </ul>
+                </div>
+                <br>
+
+                <div class="journal-reflection">
+                    <h2 class="journal-subtitle">Reflection on Goals and Timeline</h2>
+                    <h3 class="journal-text-header">Goals</h3>
+                    <p class="journal-text">
+                        I have been falling behind on some goals and getting ahead on others, going to show how unpredictable learning about this subject can be. Things are either deceptively easy or deceptively difficult. My overall ability to meet goals averages out as I'm behind on some and ahead on others. I think I've been able to meet most of the goals I set for myself each week (aside from week 15/16 with the issue I'm having with my parser) but perhaps my goals aren't ambitious enough to meet my timeline deadlines becausse I feel I'm falling behind on my overall timeline.
+                    </p><br>
+
+                    <h3 class="journal-text-header">Timeline</h3>
+                    <p class="journal-text">
+                        Overall I'm falling behind on my timeline to meet the April 20th and 21st deadline. I still haven't implemented variables or even researched branching and functions. Due to the coronavirus however, I have a lot more time to focus on my project and catch up, along with the deadlines possibly being postponed. I plan to spend more time each day working on my project to get ahead and make it into something I'm truly proud of. I think I'm about 1.5 weeks behind where I ideally would be, but that's 1.5 weeks of school worktime which amounts to a little over a full day of working from home, which makes me believe if I work hard I can catch up very quickly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
